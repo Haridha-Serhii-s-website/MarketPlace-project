@@ -21,106 +21,105 @@ mongoose
 
 
 const products = [
-    {
-      name: "iPhone 11",
-      displaysize: `6,1"`,
-      color: "Black",
-      storage:"128 GB",
-      price: 399,
-      image: "images/iphone11.jpg"
+  {
+    name: "iPhone XS",
+    displaysize: `5,8"`,
+    color: "Gold",
+    storage:"128 GB",
+    price: 250,
+    image: "images/iphoneXS.jpg"
+  },
+  {
+    name: "iPhone X",
+    displaysize: `5,8"`,
+    color: "Black",
+    storage:"128 GB",
+    price: 299,
+    image: "images/iphone-X.jpg"
+  },
+  {
+    name: "iPhone XR",
+    displaysize: `6,1"`,
+    color: "Black",
+    storage:"128 GB",
+    price: 250,
+    image: "images/iphoneXR.jpg"
+  },
+  {
+    name: "iPhone 11",
+    displaysize: `6,1"`,
+    color: "White",
+    storage:"128 GB",
+    price: 399,
+    image: "images/iphone-11.jpg"
 
-    },
-    {
-      name: "iPhone 11 Pro",
-      displaysize: `5,8"`,
-      color: "Midnight Green",
-      storage:"128 GB",
-      price: 450,
-      image: "images/iphone-11-pro.jpg"
-    },
-    { 
-      name: "iPhone 12 mini",
-      displaysize: `5,4"`,
-      color: "Red",
-      storage:"128 GB",
-      price: 450  ,
-      image: "images/iphone-12-mini.webp"
-    },
-    {
-      name: "iPhone 12 Pro",
-      displaysize: `6,1"`,
-      color: "Black",
-      storage:"128 GB",
-      price: 689,
-      image: "images/iphone-12-pro.webp"
-    },
-    {
-      name: "iPhone 12",
-      displaysize: `6,1"`,
-      color: "Black",
-      storage:"128 GB",
-      price: 499,
-      image: ""
+  },
+  {
+    name: "iPhone 11 Pro",
+    displaysize: `5,8"`,
+    color: "Gold",
+    storage:"128 GB",
+    price: 450,
+    image: "images/iphone-11pro.jpg"
+  },
+  {
+    name: "iPhone 12",
+    displaysize: `6,1"`,
+    color: "Black",
+    storage:"128 GB",
+    price: 499,
+    image: "images/iphone-12.jpg"
 
-    },
-    {
-      name: "iPhone 12 Pro Max",
-      displaysize: `6,7"`,
-      color: "Black",
-      storage:"128 GB",
-      price: 1050,
-      image: ""
-    },
-    {
-      name: "iPhone XS",
-      displaysize: `5,8"`,
-      color: "Black",
-      storage:"128 GB",
-      price: 250,
-      image: ""
-    },
-    {
-      name: "iPhone XS Max",
-      displaysize: `6,5"`,
-      color: "Black",
-      storage:"128 GB",
-      price: 450,
-      image: ""
-    },
-    {
-      name: "iPhone XR",
-      displaysize: `6,1"`,
-      color: "Black",
-      storage:"128 GB",
-      price: 250,
-      image: ""
-    },
-    {
-      name: "iPhone 13",
-      displaysize: `6,1"`,
-      color: "Black",
-      storage:"128 GB",
-      price: 699,
-      image: ""
-    },
-    {
-      name: "iPhone 13 Pro",
-      displaysize: `6,1"`,
-      color: "Black",
-      storage:"128 GB",
-      price: 950,
-      image: ""
+  },
+  { 
+    name: "iPhone 12 mini",
+    displaysize: `5,4"`,
+    color: "Green",
+    storage:"128 GB",
+    price: 450  ,
+    image: "images/iphone12-mini.jpg"
+  },
+  {
+    name: "iPhone 12 Pro",
+    displaysize: `6,1"`,
+    color: "Graphite Black",
+    storage:"128 GB",
+    price: 689,
+    image: "images/iphone-12pro.jpg"
+  },
+  {
+    name: "iPhone 12 Pro Max",
+    displaysize: `6,7"`,
+    color: "Blue",
+    storage:"128 GB",
+    price: 1050,
+    image: "images/iphone-12pro-max.jpg"
+  },
+  {
+    name: "iPhone 13",
+    displaysize: `6,1"`,
+    color: "Red",
+    storage:"128 GB",
+    price: 699,
+    image: "images/iphone-13.jpg"
+  },
+  {
+    name: "iPhone 13 Pro",
+    displaysize: `6,1"`,
+    color: "Green",
+    storage:"128 GB",
+    price: 950,
+    image: "images/iphone-13pro.jpg"
 
-    },
-    {
-      name: "iPhone X",
-      displaysize: `5,8"`,
-      color: "Black",
-      storage:"128 GB",
-      price: 299,
-      image: ""
-    }
-
+  },
+  {
+    name: "iPhone 14",
+    displaysize: `6,1"`,
+    color: "Violett",
+    storage:"128 GB",
+    price: 999,
+    image: "images/iphone-14.jpg"
+  }    
 ];
 
 const productsPromise = Product.create(products);

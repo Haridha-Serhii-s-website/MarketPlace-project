@@ -1,12 +1,12 @@
 <div id="items-div">
   {{#each products}}
     <div class="product-items">
-      <img src="https://i.imgur.com/RgiX8gE.jpg" />
-      <h3>{{this.name}}</h3>
+      <img src = {{this.image}} />
+      <a id="product-name"href="/products/{{_id}}"><h3>{{this.name}}</h3></a>
       <p><strong>Size: </strong>{{this.displaysize}}</p>
       <p><strong>Color: </strong>{{this.color}}</p>
       <p><strong>Storage: </strong>{{this.storage}}</p>
-      <p><strong>Price: </strong>{{this.price}}</p>
+      <p><strong>Price: </strong>{{this.price}} €</p>
       <a href=""><button>Buy</button></a>
     </div>
   {{/each}}

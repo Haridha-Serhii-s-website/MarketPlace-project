@@ -1,32 +1,33 @@
 body {
-  padding: 50px;
+  margin: 0;
+  padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
 a {
   color: #00b7ff;
+  text-decoration: none;
 }
-
 h1 {
   color: 15px;
 }
-
 header{
   background-color: #00b7ff49;
   color:white;
+  padding: 0.4rem 1rem;
 }
 .product-items{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap; 
   align-items: flex-start;
-  border: 1px solid red;
+  border: 3px solid red;
   margin: 1rem;
-  width: 18vw;
+  width: 22vw;
 }
 .product-items img{
-  width:100%
-
+  width:100%;
+  height:60%;
+  min-height:50%;
 }
 #items-div{
   display:flex;
@@ -44,4 +45,12 @@ header{
 }
 #sub-div-login{
   text-align: center;
+}
+#sub-div-login img{
+  width:50%;
+  margin: 0rem 1rem;
+}
+#product-name{
+  color:black;
+  font-size: larger;
 }
