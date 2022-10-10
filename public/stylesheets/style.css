@@ -51,6 +51,8 @@ h1 {
   color: black;
   font-size: larger;
 } */
+
+
 .bg-color{
   background-color: #60bbf3; 
   padding-top: 2rem;
@@ -59,8 +61,8 @@ h1 {
   background-color: #bfe3f5bd; 
 }
 .seperator{
-  height:2%;
-  background-color: none;
+    height:2%;
+    background-color: none;
 }
 .product{
   margin-bottom: 2rem;
@@ -112,6 +114,6 @@ h1 {
 .details {
   margin: 0 auto;
 }
-.btn {
+.btn-center {
   margin-top: 5rem;
 }
