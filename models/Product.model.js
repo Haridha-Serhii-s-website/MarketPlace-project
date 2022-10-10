@@ -12,6 +12,8 @@ const productSchema = new Schema(
         storage : String,
         price : Number,
         image: String,
+        about:[String],
+        specs:[String]
     },
     {
         timestamps: true

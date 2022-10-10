@@ -10,11 +10,8 @@ a {
 h1 {
   color: 15px;
 }
-header{
-  background-color: #00b7ff49;
-  color:white;
-  padding: 0.4rem 1rem;
-}
+
+/*
 .product-items{
   display: flex;
   flex-direction: column;
@@ -53,4 +50,56 @@ header{
 #product-name{
   color:black;
   font-size: larger;
+} */
+.bg-color{
+  background-color: #60bbf3; 
+  padding-top: 2rem;
+}
+.card-bg-color{
+  background-color: #bfe3f5bd; 
+}
+.seperator{
+  height:2%;
+  background-color: none;
+}
+.product{
+  margin-bottom: 2rem;
+}
+.d-flex a{
+  text-decoration: none;
+}
+.auth-btns{
+  align-items: center;
+}
+#product-name{
+  text-decoration: none;
+  color:#0d6efd;
+}
+.products-img{
+  width:18rem;
+  height:25rem;
+  text-align:center;
+  padding:1rem 0rem 1rem 1rem;
+  transition: transform .2s;
+}
+.products-img:hover{
+  transform: scale(1.1);
+}
+#signup-btn{
+  background-color: #7ED8B3;
+  color:white; 
+  margin: 1rem;
+  
+}
+#nav-logo{
+  width:150px;
+
+}
+#login-div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#login-div img{
+  width: 60%;
 }

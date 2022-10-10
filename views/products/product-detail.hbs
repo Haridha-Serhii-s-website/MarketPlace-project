@@ -1,1 +1,41 @@
-<h1>You are in products detail page</h1>
+{{!-- <div>
+        <img src={{image}} />
+
+    <div class="details-div">
+         <ul><strong>Specs:</strong>
+            {{#each specs}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        <ul><strong>About Item:</strong>
+            {{#each about}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+
+    </div>
+</div> --}}
+<div class="detail-bg">
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src={{image}} class="img-fluid rounded-start" alt="iphone Image" />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <ul class="card-text"><strong>Specs:</strong>
+            {{#each specs}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+          <ul class="card-text"><strong>About Item:</strong>
+            {{#each about}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

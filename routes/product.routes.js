@@ -20,7 +20,7 @@ router.get("/products/:productId",(req,res,next) => {
     Product.findById(productId)
         .then((productDetails) => {
             console.log(productDetails)
-            res.render("products/product-detail",{productDetails});
+            res.render("products/product-detail",productDetails);
         })
         .catch((error) => {
             console.log("Error getting details from DB",error);
