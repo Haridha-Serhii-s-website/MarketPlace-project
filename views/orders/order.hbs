@@ -1,4 +1,4 @@
-<h2>Fill in your details</h2>
+<!--<h2>Fill in your details</h2>
 
 <form action="/orders" method="post">
   <input type="text" name="firstName" placeholder="First name" />
@@ -11,3 +11,38 @@
 
   <button type="submit"> Submit order </button>
 </form>
+-->
+
+  
+<form  action="/orders" method="post" class="order-form">
+  
+  <div class="col-6 container">
+    
+    <label>First name:</label>
+    <input type="text" class="form-control" name="firstName" placeholder="Alice" >
+  </div>
+  <div class="col-6 container" >
+    <label>Last name:</label>
+    <input type="text" class="form-control" name="lastName" placeholder="Alison">
+  </div>
+  <div class="col-6 container">
+    <label>Address:</label>
+    <input type="text" class="form-control" name="address" placeholder="Street, number, apartment...">
+  </div>
+  <div class="col-6 container">
+    <label>City:</label>
+    <input type="text" class="form-control" name="city" placeholder="City, town, village....">
+  </div>
+  <div class="col-6 container">
+    <label>Postal code:</label>
+    <input class="form-control" type="text" name="postalCode" placeholder="zip">
+    
+  </div>
+  </div>
+<div class="d-grid gap-2 col-6 col-md-1 mx-auto">
+  <button class="btn btn-primary" type="submit">Place order</button>
+</div>
+
+</form>
+
+
