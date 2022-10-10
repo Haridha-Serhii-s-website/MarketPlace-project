@@ -22,6 +22,10 @@ const orderSchema = new Schema(
       type: Number,
       required: [true, "Please provide your postal code"],
     },
+    productId: {
+      type: Schema.Types.ObjectId,
+      ref: "Product",
+    },
   },
   {
     timestamps: true,
