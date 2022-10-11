@@ -5,7 +5,7 @@
         <div class="card" style="border-radius: 10px;">
           <div class="card-header px-4 py-5">
             <h5 class="text-muted mb-0">Thanks for your Order,
-              <span style="color: #4aabe9;">name</span>!</h5>
+              <span style="color: #4aabe9;">{{this.firstName}}</span>!</h5>
           </div>
           <div class="card-body p-4">
             <div class="d-flex justify-content-between align-items-center mb-4">
@@ -70,16 +70,24 @@
             </div>
 
             <div class="d-flex justify-content-between pt-2">
-              <p class="text-muted mb-0">Name : Name</p>
+              <p class="text-muted mb-0">Name :
+
+                {{this.firstName}}
+
+                {{this.lastName}}
+              </p>
             </div>
 
             <div class="d-flex justify-content-between">
-              <p class="text-muted mb-0">Address : address</p>
+              <p class="text-muted mb-0">Address :
+                {{this.address}},
+                {{this.city}}
+              </p>
 
             </div>
 
             <div class="d-flex justify-content-between mb-5">
-              <p class="text-muted mb-0">Zip code : 4545345</p>
+              <p class="text-muted mb-0">Zip code : {{this.postalCode}}</p>
 
             </div>
             <div class="d-flex justify-content-between mb-5">
