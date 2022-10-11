@@ -23,6 +23,16 @@ const projectName = "ecommerce-project";
 
 app.locals.appTitle = `${capitalized(projectName)} created with IronLauncher`;
 
+
+app.use((req, res, next) => {
+    console.log("custom middleware 1.....")
+      // Make `user` and `authenticated` available in templates
+      res.locals.userInSession = req.session.currentUser
+     // res.locals.authenticated = !req.user.anonymous
+      next()
+})
+
+    
 // 👇 Start handling routes here
 const index = require("./routes/index.routes");
 app.use("/", index);
@@ -31,7 +41,7 @@ const authRoutes = require("./routes/auth.routes");
 app.use("/", authRoutes);
 
 const productsRoutes = require("./routes/product.routes");
-app.use("/products", productsRoutes);
+app.use("/", productsRoutes);
 
 const ordersRoutes = require("./routes/order.routes");
 app.use("/", ordersRoutes);

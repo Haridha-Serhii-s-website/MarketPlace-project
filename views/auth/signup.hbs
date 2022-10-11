@@ -11,6 +11,7 @@
 
 
 <section>
+   
   <div class="container py-5 h-100">
     <div class="row d-flex align-items-center justify-content-center h-100">
       <div class="col-md-8 col-lg-7 col-xl-6">
@@ -21,7 +22,10 @@
         />
       </div>
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-        <form action="/auth/signup" method="POST">
+        <form action="/signup" method="POST">
+        {{#if errorMessage}}
+   {{errorMessage}}
+{{/if}}
          <!-- username input -->
             <div class="form-outline mb-4">
             <label class="form-label" for="username">User Name</label>
@@ -31,6 +35,7 @@
               name="username"
               class="form-control form-control-lg"
               placeholder="Alice"
+              required
             />
           </div>
           <!-- Email input -->
@@ -42,6 +47,7 @@
               name="email"
               class="form-control form-control-lg"
               placeholder="xxx@gmail.com"
+              required
             />
           </div>
 
@@ -54,6 +60,7 @@
               name="password"
               class="form-control form-control-lg"
               placeholder="password"
+              required
             />
           </div>
 
@@ -64,12 +71,10 @@
               type="submit"
             >create an Account</button>
           </div>
+          
         </form>
       </div>
     </div>
   </div>
 </section>
 
-{{#if errorMessage}}
-   {{errorMessage}}
-{{/if}}

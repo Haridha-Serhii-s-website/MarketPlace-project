@@ -14,14 +14,15 @@ const User = require("../models/User.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-router.get("/signup", isLoggedOut, (req, res) => {
+router.get("/signup", isLoggedIn, (req, res) => {
   res.render("auth/signup");
 });
 
-router.post("/signup", isLoggedOut, (req, res) => {
+router.post("/signup", isLoggedIn, (req, res) => {
   const { username,email, password } = req.body;
-  console.log(req.body);
+  console.log(req.session);
   if (!username) {
+    console.log("no user name")
     return res.status(400).render("auth/signup", {
       errorMessage: "Please provide your username.",
     });
@@ -39,7 +40,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
   }
 
   //   ! This use case is using a regular expression to control for special characters and min length
-  /*
+ 
   const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
 
   if (!regex.test(password)) {
@@ -48,10 +49,10 @@ router.post("/signup", isLoggedOut, (req, res) => {
         "Password needs to have at least 8 chars and must contain at least one number, one lowercase and one uppercase letter.",
     });
   }
- */
+
 
   // Search the database for a user with the username submitted in the form
-  User.findOne({ email }).then((found) => {
+  User.findOne({email}).then((found) => {
     // If the user is found, send the message username is taken
     if (found) {
       return res
@@ -94,13 +95,14 @@ router.post("/signup", isLoggedOut, (req, res) => {
   });
 });
 
-router.get("/login", isLoggedOut, (req, res) => {
+router.get("/login", isLoggedIn, (req, res) => {
   res.render("auth/login");
 });
 
-router.post("/login", isLoggedOut, (req, res, next) => {
+router.post("/login", isLoggedIn, (req, res, next) => {
   const { email, password } = req.body;
-  console.log(req.body)
+  console.log(req.body);
+  console.log(req.session);
 
   if (!email) {
     return res
@@ -128,6 +130,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
 
       // If user is found based on the username, check if the in putted password matches the one saved in the database
       bcrypt.compare(password, user.password).then((isSamePassword) => {
+        console.log(req.session)
         if (!isSamePassword) {
           return res
             .status(400)
@@ -148,7 +151,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
     });
 });
 
-router.get("/logout", isLoggedIn, (req, res) => {
+router.get("/logout", isLoggedOut, (req, res) => {
   req.session.destroy((err) => {
     if (err) {
       return res
