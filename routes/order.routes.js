@@ -18,7 +18,7 @@ router.post("/orders", (req, res, next) => {
   Order.create(newOrder)
     .then(() => {
       console.log("Order is created");
-      res.redirect("/orders-list");
+      res.redirect("/orders/my-orders");
     })
     .catch((err) => {
       console.log("error creating new order in DB", err);
@@ -27,10 +27,11 @@ router.post("/orders", (req, res, next) => {
 });
 
 //Get all orders from DB
-router.get("/orders-list", (req, res, next) => {
+router.get("/orders/my-orders", (req, res, next) => {
   Order.find()
     .then((ordersFromDB) => {
-      res.render("orders/orders-list", { orders: ordersFromDB });
+      console.log(ordersFromDB);
+      res.render("orders/my-orders", ordersFromDB[0]);
     })
     .catch((err) => {
       console.log("error creating new order in DB", err);
