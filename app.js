@@ -27,7 +27,7 @@ app.locals.appTitle = `${capitalized(projectName)} created with IronLauncher`;
 app.use((req, res, next) => {
     console.log("custom middleware 1.....")
       // Make `user` and `authenticated` available in templates
-      res.locals.userInSession = req.session.currentUser
+      res.locals.userInSession = req.session.user
      // res.locals.authenticated = !req.user.anonymous
       next()
 })

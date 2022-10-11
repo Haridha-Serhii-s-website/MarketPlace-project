@@ -2,6 +2,8 @@ const router = require("express").Router();
 const Product = require("../models/Product.model");
 const Order = require("../models/Order.model");
 
+const isLoggedIn = require("../middleware/isLoggedIn");
+
 router.get("/orders", (req, res, next) => {
   res.render("orders/order");
 });
@@ -27,11 +29,12 @@ router.post("/orders", (req, res, next) => {
 });
 
 //Get all orders from DB
-router.get("/orders/my-orders", (req, res, next) => {
+router.get("/orders/my-orders",isLoggedIn, (req, res, next) => {
+  console.log(req.session.user.email)
   Order.find()
     .then((ordersFromDB) => {
       console.log(ordersFromDB);
-      res.render("orders/my-orders", ordersFromDB[0]);
+      res.render("orders/my-orders", {orderDetails:ordersFromDB});
     })
     .catch((err) => {
       console.log("error creating new order in DB", err);

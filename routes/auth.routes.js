@@ -14,11 +14,11 @@ const User = require("../models/User.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-router.get("/signup", isLoggedIn, (req, res) => {
+router.get("/signup", isLoggedOut, (req, res) => {
   res.render("auth/signup");
 });
 
-router.post("/signup", isLoggedIn, (req, res) => {
+router.post("/signup", isLoggedOut, (req, res) => {
   const { username,email, password } = req.body;
   console.log(req.session);
   if (!username) {
@@ -95,11 +95,11 @@ router.post("/signup", isLoggedIn, (req, res) => {
   });
 });
 
-router.get("/login", isLoggedIn, (req, res) => {
+router.get("/login", isLoggedOut, (req, res) => {
   res.render("auth/login");
 });
 
-router.post("/login", isLoggedIn, (req, res, next) => {
+router.post("/login", isLoggedOut, (req, res, next) => {
   const { email, password } = req.body;
   console.log(req.body);
   console.log(req.session);
@@ -118,8 +118,8 @@ router.post("/login", isLoggedIn, (req, res, next) => {
       .render("auth/login", { errorMessage: "Your password needs to be at least 8 characters long." });
   }
 
-  // Search the database for a user with the username submitted in the form
-  User.findOne({ username })
+  // Search the database for a user with the email submitted in the form
+  User.findOne({email})
     .then((user) => {
       // If the user isn't found, send the message that user provided wrong credentials
       if (!user) {
@@ -128,7 +128,7 @@ router.post("/login", isLoggedIn, (req, res, next) => {
           .render("auth/login", { errorMessage: "Wrong credentials." });
       }
 
-      // If user is found based on the username, check if the in putted password matches the one saved in the database
+      // If user is found based on the email, check if the in putted password matches the one saved in the database
       bcrypt.compare(password, user.password).then((isSamePassword) => {
         console.log(req.session)
         if (!isSamePassword) {
@@ -151,7 +151,7 @@ router.post("/login", isLoggedIn, (req, res, next) => {
     });
 });
 
-router.get("/logout", isLoggedOut, (req, res) => {
+router.get("/logout", isLoggedIn, (req, res) => {
   req.session.destroy((err) => {
     if (err) {
       return res

@@ -78,10 +78,9 @@ h1 {
   color:#0d6efd;
 }
 .products-img{
-  width:18rem;
   height:25rem;
   text-align:center;
-  padding:1rem 0rem 1rem 1rem;
+  padding:1rem;
   transition: transform .2s;
 }
 .products-img:hover{
@@ -96,12 +95,12 @@ h1 {
   width:150px;
 
 }
-#login-div{
+.login-div{
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-#login-div img{
+.login-div img{
   width: 60%;
 }
 .order-form {
@@ -131,8 +130,49 @@ h1 {
   transition: transform 1s;
 }
 .img-center:hover{
-  transform: scale(1.5);
+  transform: scale(1.12);
 }
 .section-padding{
   padding:2rem;
+}
+.account-div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.account-div img{
+  width:40%;
+}
+.logout-img-padding{
+  padding:0rem 0.5rem;
+}
+#logout-img{
+  padding:0.3rem;
+}
+#sess-padding{
+  padding:1rem 2rem 0rem 2rem;
+}
+#home-container{
+  display:flex;
+}
+#home-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem 3rem 0rem 6rem;
+}
+.sub-content{
+  display:flex;
+  align-items: center;
+}
+#home-img{
+  width:48vw;
+  height:80vh;
+}
+.home-section-img{
+  background-color: #33a9f3;
+}
+.content-icon{
+  width:70%;
 }
