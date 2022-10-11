@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Product = require("../models/Product.model");
 
 //READ : Get all the products from DB
-router.get("/products",(req,res,next) => {
+router.get("/",(req,res,next) => {
     Product.find()
             .then((prdouctsFromDb) => {
                 console.log(prdouctsFromDb)
@@ -15,7 +15,7 @@ router.get("/products",(req,res,next) => {
 });
 
 //READ : get the products matching productID
-router.get("/products/:productId",(req,res,next) => {
+router.get("/:productId",(req,res,next) => {
     const productId = req.params.productId;
     Product.findById(productId)
         .then((productDetails) => {

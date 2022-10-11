@@ -28,10 +28,10 @@ const index = require("./routes/index.routes");
 app.use("/", index);
 
 const authRoutes = require("./routes/auth.routes");
-app.use("/auth", authRoutes);
+app.use("/", authRoutes);
 
 const productsRoutes = require("./routes/product.routes");
-app.use("/", productsRoutes);
+app.use("/products", productsRoutes);
 
 const ordersRoutes = require("./routes/order.routes");
 app.use("/", ordersRoutes);
