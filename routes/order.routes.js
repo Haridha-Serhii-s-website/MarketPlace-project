@@ -48,6 +48,35 @@ router.post("/orders/:productId",isLoggedIn, (req, res, next) => {
     });
 });
 
+//update the order detail
+router.get("/orders/:orderId/edit",(req,res,next)=>{
+  Order.findById(req.params.orderId)
+  .then((orderFromDb) => {
+    console.log(orderFromDb)
+    res.render("orders/edit-order",{orderFromDb})
+  })
+  .catch((err) => {
+    console.log("Error getting order from DB ",err);
+    next(err);
+  })
+})
+
+//UPDATE: Process order Info
+router.post("/orders/:orderId/edit",(req,res,next)=>{
+  const orderId = req.params.orderId;
+  const{firstName, lastName, address, city, postalCode} = req.body;
+  const updatedDetails = {firstName, lastName, address, city, postalCode};
+  console.log(updatedDetails)
+  Order.findByIdAndUpdate(orderId,updatedDetails)
+  .then((data) => {
+    console.log(data)
+    res.redirect("/orders/my-orders");
+  })
+  .catch((err) => {
+    console.log("Error getting order from DB ",err);
+    next(err);
+  })
+})
 
 //Delete the order
 router.post("/orders/:id/my-orders",isLoggedIn, (req, res, next) => {
