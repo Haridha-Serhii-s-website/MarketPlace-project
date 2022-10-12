@@ -176,3 +176,13 @@ h1 {
 .content-icon{
   width:70%;
 }
+.text-resize{
+  font-size: small;
+  line-height: 50%;
+}
+.conatainer-margin{
+  margin-top:0rem;
+}
+.header-text{
+  font-weight: normal;
+}

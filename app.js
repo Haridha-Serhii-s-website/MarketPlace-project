@@ -21,7 +21,7 @@ require("./config")(app);
 const capitalized = require("./utils/capitalized");
 const projectName = "ecommerce-project";
 
-app.locals.appTitle = `${capitalized(projectName)} created with IronLauncher`;
+//app.locals.appTitle = `${capitalized(projectName)} created with IronLauncher`;
 
 
 app.use((req, res, next) => {
