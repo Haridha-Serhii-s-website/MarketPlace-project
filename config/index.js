@@ -49,6 +49,9 @@ module.exports = (app) => {
   app.use(
     favicon(path.join(__dirname, "..", "public", "images", "favicon.ico"))
   );
+  
+  //able to log in on production
+  app.set('trust proxy', 1);
 
   // ℹ️ Middleware that adds a "req.session" information and later to check that you are who you say you are 😅
   app.use(
