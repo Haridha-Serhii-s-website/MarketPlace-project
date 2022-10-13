@@ -90,4 +90,9 @@ router.post("/orders/:id/my-orders", isLoggedIn, (req, res, next) => {
     });
 });
 
+//confirm order
+router.post("/orders/my-orders/confirm", isLoggedIn, (req, res, next) => {
+  res.render("orders/confirmed-order");
+});
+
 module.exports = router;
