@@ -1,33 +1,54 @@
-  
-<form  action="/orders/{{orderFromDb._id}}/edit" method="post" class="order-form">
-  
+<form
+  action="/orders/{{orderFromDb._id}}/edit"
+  method="post"
+  class="order-form"
+>
   <div class="col-6 container">
-    
     <label>First name:</label>
-    <input type="text" class="form-control" name="firstName"  value={{orderFromDb.firstName}} >
+    <input
+      type="text"
+      class="form-control"
+      name="firstName"
+      value={{orderFromDb.firstName}}
+    />
   </div>
-  <div class="col-6 container" >
+  <div class="col-6 container">
     <label>Last name:</label>
-    <input type="text" class="form-control" name="lastName" value={{orderFromDb.lastName}}>
+    <input
+      type="text"
+      class="form-control"
+      name="lastName"
+      value={{orderFromDb.lastName}}
+    />
   </div>
   <div class="col-6 container">
     <label>Address:</label>
-    <input type="text" class="form-control" name="address" value={{orderFromDb.address}}>
+    <input
+      type="text"
+      class="form-control"
+      name="address"
+      value={{orderFromDb.address}}
+    />
   </div>
   <div class="col-6 container">
     <label>City:</label>
-    <input type="text" class="form-control" name="city" value={{orderFromDb.city}}>
+    <input
+      type="text"
+      class="form-control"
+      name="city"
+      value={{orderFromDb.city}}
+    />
   </div>
   <div class="col-6 container">
     <label>Postal code:</label>
-    <input class="form-control" type="text" name="postalCode" value={{orderFromDb.postalCode}}>
-    
+    <input
+      class="form-control"
+      type="text"
+      name="postalCode"
+      value={{orderFromDb.postalCode}}
+    />
   </div>
+  <div class="d-grid gap-2 col-6 col-md-1 mx-auto">
+    <button class="btn btn-primary btn-center">Submit</button>
   </div>
-<div class="d-grid gap-2 col-6 col-md-1 mx-auto">
-  <button class="btn btn-primary btn-center">submit</button>
-</div>
-
 </form>
-
-

@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 const Product = require('../models/Product.model');
-//const Order = require('../models/Author.model');
-
 const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost/ecommerce-project';
 
 mongoose
@@ -226,7 +224,6 @@ const products = [
 ];
 
 const productsPromise = Product.create(products);
-
 
 Promise.all([productsPromise])
   .then( (result) => {

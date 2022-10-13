@@ -10,97 +10,41 @@ a {
 h1 {
   color: 15px;
 }
-
-/*
-.product-items{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  border: 3px solid red;
-  margin: 1rem;
-  width: 22vw;
-}
-.product-items img {
-  width: 100%;
-  height: 60%;
-  min-height: 50%;
-}
-#items-div {
-  display: flex;
-  flex-wrap: wrap;
-}
-#nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#login-div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#sub-div-login {
-  text-align: center;
-}
-#sub-div-login img {
-  width: 50%;
-  margin: 0rem 1rem;
-}
-#product-name {
-  color: black;
-  font-size: larger;
-} */
-
-
-.bg-color{
-  background-color: #4aabe9; 
+.bg-color {
+  background-color: #4aabe9;
   padding-top: 2rem;
 }
-.card-bg-color{
-  background-color: #bfe3f5bd; 
+.card-bg-color {
+  background-color: #bfe3f5bd;
 }
-.seperator{
-    height:2%;
-    background-color: none;
+.seperator {
+  height: 2%;
+  background-color: none;
 }
-.product{
+.product {
   margin-bottom: 2rem;
 }
-.d-flex a{
+.d-flex a {
   text-decoration: none;
 }
-.auth-btns{
+.auth-btns {
   align-items: center;
 }
-#product-name{
-  text-decoration: none;
-  color:#0d6efd;
+.products-img {
+  height: 25rem;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s;
 }
-.products-img{
-  height:25rem;
-  text-align:center;
-  padding:1rem;
-  transition: transform .2s;
-}
-.products-img:hover{
+.products-img:hover {
   transform: scale(1.09);
 }
-#signup-btn{
-  background-color: #7ED8B3;
-  color:white; 
-  margin: 1rem;
-}
-#nav-logo{
-  width:150px;
-
-}
-.login-div{
+.login-div {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.login-div img{
+.login-div img {
   width: 60%;
 }
 .order-form {
@@ -115,85 +59,97 @@ h1 {
 .btn-center {
   margin-top: 5rem;
 }
-.detail-bg{
-  max-width:70%;
-  padding:2rem;
-  margin:1rem auto;
+.detail-bg {
+  max-width: 70%;
+  padding: 2rem;
+  margin: 1rem auto;
   background-color: #4aabe9;
 }
-.text-color{
+.text-color {
   color: #00b7ff;
 }
-.img-center{
+.img-center {
   padding: 1rem;
   margin: 6rem auto;
   transition: transform 1s;
 }
-.img-center:hover{
+.img-center:hover {
   transform: scale(1.12);
 }
-.section-padding{
-  padding:2rem;
+.section-padding {
+  padding: 2rem;
 }
-.account-div{
+.account-div {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.account-div img{
-  width:40%;
+.account-div img {
+  width: 40%;
 }
-.logout-img-padding{
-  padding:0rem 0.5rem;
+.logout-img-padding {
+  padding: 0rem 0.5rem;
 }
-#logout-img{
-  padding:0.3rem;
+.sub-content {
+  display: flex;
+  align-items: center;
 }
-#sess-padding{
-  padding:1rem 2rem 0rem 2rem;
+.home-section-img {
+  background-color: #33a9f3;
 }
-#home-container{
-  display:flex;
+.content-icon {
+  width: 70%;
 }
-#home-content{
+.text-resize {
+  font-size: small;
+  line-height: 50%;
+}
+.conatainer-margin {
+  margin-top: 0rem;
+}
+.header-text {
+  font-weight: normal;
+}
+.card-size {
+  margin: 0rem auto;
+}
+.confirm-bg-color {
+  background-color: #4aabe9;
+  height: 100%;
+  padding-top: 10%;
+}
+.card-width {
+  width: 60%;
+}
+#product-name {
+  text-decoration: none;
+  color: #0d6efd;
+}
+#signup-btn {
+  background-color: #7ed8b3;
+  color: white;
+  margin: 1rem;
+}
+#nav-logo {
+  width: 150px;
+}
+#logout-img {
+  padding: 0.3rem;
+}
+#sess-padding {
+  padding: 1rem 2rem 0rem 2rem;
+}
+#home-container {
+  display: flex;
+}
+#home-content {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   padding: 3rem 3rem 0rem 6rem;
 }
-.sub-content{
-  display:flex;
-  align-items: center;
-}
-#home-img{
-  width:48vw;
-  height:80vh;
-}
-.home-section-img{
-  background-color: #33a9f3;
-}
-.content-icon{
-  width:70%;
-}
-.text-resize{
-  font-size: small;
-  line-height: 50%;
-}
-.conatainer-margin{
-  margin-top:0rem;
-}
-.header-text{
-  font-weight: normal;
-}
-.card-size{
-  margin: 0rem auto;
-}
-.confirm-bg-color{
-  background-color: #4aabe9;
-  height:100%;
-  padding-top:10%;
-}
-.card-width{
-  width:60%;
+#home-img {
+  width: 48vw;
+  height: 80vh;
 }

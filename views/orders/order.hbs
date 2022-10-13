@@ -15,27 +15,26 @@
 
   
 <form  action="/orders/{{productId}}" method="post" class="order-form">
-  
   <div class="col-6 container">
     <h4 class="text-secondary" style="margin-bottom: 2%;">Shipping details:</h4>
     <label>First name:</label>
-    <input type="text" class="form-control" name="firstName" placeholder="Alice" >
+    <input type="text" class="form-control" name="firstName" placeholder="Alice" required>
   </div>
   <div class="col-6 container" >
     <label>Last name:</label>
-    <input type="text" class="form-control" name="lastName" placeholder="Alison">
+    <input type="text" class="form-control" name="lastName" placeholder="Alison" required>
   </div>
   <div class="col-6 container">
     <label>Address:</label>
-    <input type="text" class="form-control" name="address" placeholder="Street, Number, Apartment...">
+    <input type="text" class="form-control" name="address" placeholder="Street, Number, Apartment..." required>
   </div>
   <div class="col-6 container">
     <label>City:</label>
-    <input type="text" class="form-control" name="city" placeholder="City, Town, Village....">
+    <input type="text" class="form-control" name="city" placeholder="City, Town, Village...." required>
   </div>
   <div class="col-6 container">
     <label>Postal code:</label>
-    <input class="form-control" type="text" name="postalCode" placeholder="Zip Code">
+    <input class="form-control" type="text" name="postalCode" placeholder="Zip Code" required>
     
   </div>
   </div>

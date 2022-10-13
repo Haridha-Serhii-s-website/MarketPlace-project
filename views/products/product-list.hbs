@@ -1,72 +1,41 @@
-{{!-- <div id="items-div">
-  {{#each products}}
-    <div class="product-items">
-      <img src={{this.image}} />
-      <a id="product-name" href="/products/{{_id}}"><h3>{{this.name}}</h3></a>
-      <p><strong>Size: </strong>{{this.displaysize}}</p>
-      <p><strong>Color: </strong>{{this.color}}</p>
-      <p><strong>Storage: </strong>{{this.storage}}</p>
-      <p><strong>Price: </strong>{{this.price}} €</p>
-      <a href="/products/{{_id}}"><button>View Details</button></a>
-    </div>
-  {{/each}}
-</div> --}}
-{{!-- 
-<div class="container text-center">
-  <div id="product-list" class="row">
-    {{#each products}}
-    <section class="product col-12 col-md-4">
-      <div class="card">
-        <img src={{this.image}} class="card-img-top" alt="iphone Image" />
-        <div class="card-body">
-          <a class="card-text" id="product-name" href="/products/{{_id}}"><h4>{{this.name}}</h4></a>
-          <p class="card-text"><strong>Size: </strong>{{this.displaysize}}</p>
-          <p class="card-text"><strong>Color: </strong>{{this.color}}</p>
-          <p class="card-text"><strong>Storage: </strong>{{this.storage}}</p>
-          <p class="card-text"><strong>Price: </strong>{{this.price}} €</p>
-          <a href="/products/{{_id}}" class="btn btn-primary">View Details</a>
-          <a href="#" class="btn btn-primary">Buy now</a>
-        </div>
-      </div>
-    </section>
-    {{/each}}
-  </div>
-</div> --}}
 <div class="bg-color">
-<div class="container text-center ">
-  <div id="product-list" class="row">
-    {{#each products}}
-      <section class="product col-12 col-md-3">
-        <div class="card">
-          <img
-            class="products-img"
-            src={{this.image}}
-            class="card-img-top"
-            alt="iphone Image"
-          />
-          <div class="card-body">
-            <a class="card-title" id="product-name" href="/products/{{_id}}"><h4
-              >{{this.name}}</h4></a>
-          </div>
-          <ul class="list-group list-group-flush ">
-            <li class="list-group-item"><strong>Size:
-              </strong>{{this.displaysize}}</li>
-            <li class="list-group-item"><strong>Color:
-              </strong>{{this.color}}</li>
-            <li class="list-group-item"><strong>Price: </strong>{{this.price}}
-              €</li>
-          </ul>
-          <div class="card-body card-bg-color">
-            <a
+  <div class="container text-center">
+    <div id="product-list" class="row">
+      {{#each products}}
+        <section class="product col-12 col-md-3">
+          <div class="card">
+            <img
+              class="products-img"
+              src={{this.image}}
+              class="card-img-top"
+              alt="iphone Image"
+            />
+            <div class="card-body">
+              <a
+                class="card-title"
+                id="product-name"
+                href="/products/{{_id}}"
+              ><h4>{{this.name}}</h4></a>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Size:
+                </strong>{{this.displaysize}}</li>
+              <li class="list-group-item"><strong>Color:
+                </strong>{{this.color}}</li>
+              <li class="list-group-item"><strong>Price: </strong>{{this.price}}
+                €</li>
+            </ul>
+            <div class="card-body card-bg-color">
+              <a
                 href="/products/{{_id}}"
                 class="btn btn-light text-primary"
                 style="border:2px solid blue"
               >More Details</a>
-            <a href="/orders/{{_id}}" class="btn btn-primary">Buy now</a>
+              <a href="/orders/{{_id}}" class="btn btn-primary">Buy now</a>
+            </div>
           </div>
-        </div>
-      </section>
-    {{/each}}
+        </section>
+      {{/each}}
+    </div>
   </div>
-</div>
 </div>

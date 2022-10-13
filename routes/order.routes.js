@@ -6,7 +6,6 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 
 //Get all orders from DB
 router.get("/orders/my-orders", isLoggedIn, (req, res, next) => {
-  //console.log(req.session.user.email);
   Order.find()
     .sort({ updatedAt: -1 })
     .populate("productId")
@@ -65,10 +64,9 @@ router.post("/orders/:orderId/edit", (req, res, next) => {
   const orderId = req.params.orderId;
   const { firstName, lastName, address, city, postalCode } = req.body;
   const updatedDetails = { firstName, lastName, address, city, postalCode };
-  //console.log(updatedDetails);
   Order.findByIdAndUpdate(orderId, updatedDetails)
     .then((data) => {
-      //console.log(data);
+      console.log(data);
       res.redirect("/orders/my-orders");
     })
     .catch((err) => {
@@ -90,7 +88,7 @@ router.post("/orders/:id/my-orders", isLoggedIn, (req, res, next) => {
     });
 });
 
-//confirm order
+//process confirm order
 router.post("/orders/my-orders/confirm", isLoggedIn, (req, res, next) => {
   res.render("orders/confirmed-order");
 });
