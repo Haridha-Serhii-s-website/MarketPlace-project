@@ -4,16 +4,15 @@
       <div class="col-lg-10 col-xl-8">
         <div class="card" style="border-radius: 10px;">
           <div class="card-header px-4 py-5">
-            <h5 class="text-muted mb-0">Thanks for your Order,
+            <h5 class="text-muted mb-0">Please confirm your order,
               <span style="color: #4aabe9;">{{orderDetails.firstName}}</span>!</h5>
           </div>
           <div class="card-body p-4">
             <div class="d-flex justify-content-between align-items-center mb-4">
               <p class="lead fw-normal mb-0" style="color: #4aabe9;">Receipt</p>
-              {{!-- <a class="small text-muted mb-0" href="/orders/{{_id}}/my-orders"> --}}
               <form method="POST" action="/orders/{{orderDetails._id}}/my-orders">
-                  <button class="small text-muted mb-0"  type="submit" >Delete order</button></a>
-              </form>
+                  <button class="small text-danger mb-0 btn "  style="font-size:small" type="submit" >Delete order</button></a>
+              </form>                    
               
             </div>
             <div class="card shadow-0 border mb-4">
@@ -96,7 +95,7 @@
 
             </div>
             <div class="d-flex justify-content-between mb-5">
-              <button type="button" class="btn btn-success btn-sm">Confirm order</button>
+              <button  type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#ConfirmOrderModal">Confirm order</button>
 
             </div>
           </div>
@@ -107,7 +106,7 @@
 
             <h5
               class="d-flex align-items-center justify-content-end text-white text-uppercase mb-0"
-            >Total: <span class="h2 mb-0 ms-2">{{orderDetails.productId.price}}</span></h5>
+            >Total: <span class="h2 mb-0 ms-2">{{orderDetails.productId.price}} €</span></h5>
 
           </div>
         </div>
@@ -115,3 +114,22 @@
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="ConfirmOrderModal" tabindex="-1" aria-labelledby="ConfirmOrderModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ConfirmOrderModalLabel">🎉Thanks for your order🎁🎉</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Further details will be sent to <strong class="text-primary">{{userInSession.email}}</strong></h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href ="/products"><button type="button" class="btn btn-primary">Confirm</button></a>
+      </div>
+    </div>
+  </div>
+</div>
