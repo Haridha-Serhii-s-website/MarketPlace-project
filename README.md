@@ -1,6 +1,8 @@
 # Redid
 Redid - A website where you can buy a mobilephones for a reasonable price.
 
+![alt text](/public/images/Redid-home.png "Logo Title Text 1")
+
 ## Overview
 <details open="open">
   <summary>Table of Contents</summary>
@@ -42,7 +44,7 @@ Redid - A website where you can buy a mobilephones for a reasonable price.
 
 ## Demo link
 
-    Here is the link for the website (https://redid.herokuapp.com/)
+Here is the link for the website [Redid](https://redid.herokuapp.com/)
 
 
 ## Bulit With
