@@ -10,7 +10,7 @@ Redid - A website where you can buy a mobilephones for a reasonable price.
       <li><a href="#description">Description</a></li>
       <li><a href="#instructions-to-run-in-local-machine">Instructions to run in local machine</a></li>
       <li><a href="#demo-link">Demo link</a></li>
-      <li><a href="#built-with">Bulit With</a></li>
+      <li><a href="#built-with">Built With</a></li>
     </ul>
 
 ## Description
@@ -30,6 +30,7 @@ Redid - A website where you can buy a mobilephones for a reasonable price.
         <li>Create ".env" file add the following environment variables</li>
         <ul>
             <li>SESS_SECRET = 'keyboard cat'(Value can be any string)</li>
+            <li>MONGODB_URI = ''</li>
         </ul>
     </ul>
     <li>Install Dependencies</li>
@@ -47,7 +48,7 @@ Redid - A website where you can buy a mobilephones for a reasonable price.
 Here is the link for the website [Redid](https://redid.herokuapp.com/)
 
 
-## Bulit With
+## Built With
 
  <ul>
     <li>Node and Express js</li>
